@@ -1,5 +1,5 @@
 function plotData(X, y)
-%PLOTDATA Plots the data points X and y into a new figure 
+%PLOTDATA Plots the data points X and y into a new figure
 %   PLOTDATA(x,y) plots the data points with + for the positive examples
 %   and o for the negative examples. X is assumed to be a Mx2 matrix.
 
@@ -12,12 +12,13 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+m = size(y, 1);
+admit = X(y(:,1) == 1, :)
+no_admit = X(y(:,1) == 0, :)
 
+plot(admit(:,1), admit(:,2), 'k+')
 
-
-
-
-
+plot(no_admit(:,1), no_admit(:,2),'ro')
 
 
 % =========================================================================
